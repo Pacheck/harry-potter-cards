@@ -1,11 +1,14 @@
-import React from 'react';
+import React from "react";
+import CardItem from "../card/index.jsx";
 
-import * as S from './styles.js';
+import * as S from "./styles.js";
 
-const Main = ({ characters }) => {
-  return characters.map((char) => {
-    return <Card character={char} />;
-  });
-};
+const Main = ({ characters }) => (
+  <S.Container>
+    {characters.map(
+      (char, index) => index < 24 && <CardItem character={char} />
+    )}
+  </S.Container>
+);
 
 export default Main;

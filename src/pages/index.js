@@ -14,7 +14,6 @@ const Index = () => {
   const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
-    process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
     axios.get(api).then((res) => {
       console.log(res.data);
       setCharacters(res.data);
